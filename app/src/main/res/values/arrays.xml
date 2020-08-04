@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="my_array">
+
+        <item>string 1</item>
+        <item>string 2</item>
+        <item>string 3</item>
+        <item>string 4</item>
+        <item>string 5</item>
+        <item>string 6</item>
+        <item>string 7</item>
+        <item>string 8</item>
+        <item>string 9</item>
+        <item>string 10</item>
+        <item>string 11</item>
+        <item>string 12</item>
+        <item>string 13</item>
+        <item>string 14</item>
+        <item>string 15</item>
+        <item>string 16</item>
+        <item>string 17</item>
+        <item>string 18</item>
+        <item>string 19</item>
+        <item>string 20</item>
+        <item>string 21</item>
+
+    </string-array>
+
+</resources>

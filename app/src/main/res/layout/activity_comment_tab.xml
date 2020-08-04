@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentTab">
+
+    <Button
+        android:id="@+id/noCommentBtn"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:text="No"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/yesCommentBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/yesCommentBtn" />
+
+    <Button
+        android:id="@+id/yesCommentBtn"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:text="Yes"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/commentText"
+        app:layout_constraintEnd_toStartOf="@+id/noCommentBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anyCommentTBox" />
+
+    <TextView
+        android:id="@+id/anyCommentTBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comments/Issues with the Inspection?"
+        android:textColor="@color/Black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/yesCommentBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/commentText"
+        android:layout_width="437dp"
+        android:layout_height="77dp"
+        android:ems="10"
+        android:hint="Any Comments Go Here"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/finishCommentBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yesCommentBtn" />
+
+    <Button
+        android:id="@+id/finishCommentBtn"
+        android:layout_width="133dp"
+        android:layout_height="68dp"
+        android:text="Finish"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

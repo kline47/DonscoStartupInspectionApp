@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userStartupInfo">
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="500dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:hint="5-Digit Clock Number (On ID Badge)"
+        android:inputType="textPersonName"
+        android:textColor="@color/DarkGray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/userDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userDate"
+        android:layout_width="500dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:hint="Date (Ex: 7/4/2020)"
+        android:inputType="textPersonName"
+        android:textColor="@color/DarkGray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/userDept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <EditText
+        android:id="@+id/userTruck"
+        android:layout_width="500dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:hint="Truck #"
+        android:inputType="textPersonName"
+        android:textColor="@color/DarkGray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/addDataBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDept" />
+
+    <EditText
+        android:id="@+id/userDept"
+        android:layout_width="500dp"
+        android:layout_height="75dp"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="textPersonName"
+        android:textColor="@color/DarkGray"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/userTruck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDate" />
+
+    <Button
+        android:id="@+id/addDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Info and Begin Inspection"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userTruck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
