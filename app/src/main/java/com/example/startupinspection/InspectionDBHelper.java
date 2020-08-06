@@ -69,7 +69,7 @@ public class InspectionDBHelper extends SQLiteOpenHelper {
         addQuestion(q1);
         Question q2 = new Question("Overhead Guard?", "Satisfactory", "Unsatisfactory", 1);
         addQuestion(q2);
-        Question q3 = new Question("Mast/Carriage?", "Satisfactory", "Unsatisfactory", 1);
+        Question q3 = new Question("Mast and Carriage?", "Satisfactory", "Unsatisfactory", 1);
         addQuestion(q3);
         Question q4 = new Question("Forks and Locking Pins?", "Satisfactory", "Unsatisfactory", 1);
         addQuestion(q4);
