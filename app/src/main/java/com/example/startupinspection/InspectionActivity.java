@@ -106,6 +106,7 @@ public class InspectionActivity extends AppCompatActivity {
 
     //reports user answer to each question and stores it in database section created in previous activity
     private void addToUserInfo() {
+        answered = true;
         int ansNum = checkAnswer();
         String satUnsat = "";
         if (ansNum == 1) {
@@ -125,6 +126,7 @@ public class InspectionActivity extends AppCompatActivity {
             textViewQuestion.setText(currentQuestion.getQuestion());
             btn1.setText(currentQuestion.getOption1());
             btn2.setText(currentQuestion.getOption2());
+            btnGroup.check(btn1.getId());
             questionCounter++;
             answered = false;
         } else {
@@ -139,7 +141,6 @@ public class InspectionActivity extends AppCompatActivity {
         RadioButton btnSelected = findViewById(btnGroup.getCheckedRadioButtonId());
         int ans = btnGroup.indexOfChild(btnSelected) + 1;
         return ans;
-
     }
 
     //finishes cycling through questions and advances to comments

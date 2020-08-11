@@ -77,7 +77,10 @@ public class CommentTab extends AppCompatActivity {
         noComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finishComment.setVisibility(view.VISIBLE);
+                user.setComment("No Additional Comments");
+                testRef.child(currTime).child(commentCategory).setValue(user);
+                Toast.makeText(CommentTab.this, "data inserted successfully", Toast.LENGTH_LONG).show();
+                finishComments();
             }
         });
 
