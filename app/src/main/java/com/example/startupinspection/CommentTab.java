@@ -34,7 +34,7 @@ public class CommentTab extends AppCompatActivity {
     DatabaseReference testRef;
     Users user;
     long maxID;
-    private String name, comment, timeStamp;
+    private String name, comment, currTime;
     String commentCategory = "Any Comments";
 
     @Override
@@ -49,7 +49,7 @@ public class CommentTab extends AppCompatActivity {
         finishComment = (Button) findViewById(R.id.finishCommentBtn);
 
         Intent intent = getIntent();
-        timeStamp = intent.getStringExtra(InspectionActivity.TEXT_NAME2);
+        currTime = intent.getStringExtra(InspectionActivity.TEXT_NAME2);
 
         user = new Users();
         testRef = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -89,7 +89,7 @@ public class CommentTab extends AppCompatActivity {
                     comment = "No Additional Comments";
                 }
                 user.setComment(comment);
-                testRef.child(timeStamp).child(commentCategory).setValue(user);
+                testRef.child(currTime).child(commentCategory).setValue(user);
                 Toast.makeText(CommentTab.this, "data inserted successfully", Toast.LENGTH_LONG).show();
                 finishComments();
             }

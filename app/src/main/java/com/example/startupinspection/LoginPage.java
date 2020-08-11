@@ -103,6 +103,8 @@ public class LoginPage extends AppCompatActivity {
                 if (TextUtils.isEmpty(email)) {
                     emailTBox.setError("Email is required");
                     return;
+                } else if (email.equals("donsco")) {
+                    email = "dwv.donsco@gmail.com";
                 }
                 if (TextUtils.isEmpty(pw)) {
                     pwTBox.setError("Password is required");

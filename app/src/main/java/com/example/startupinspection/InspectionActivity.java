@@ -47,7 +47,7 @@ public class InspectionActivity extends AppCompatActivity {
     private String question;
     private String name;
     //String name, date, dept, truck;
-    private String timeStamp;
+    private String currTime;
     public static final String TEXT_NAME2 = "com.example.startupinspection.TEXT_NAME";
 
     private List<Question> questionList;
@@ -66,7 +66,7 @@ public class InspectionActivity extends AppCompatActivity {
 
         //importing username for question/answer entry into database
         Intent intent = getIntent();
-        timeStamp = intent.getStringExtra(userStartupInfo.TEXT_NAME);
+        currTime = intent.getStringExtra(userStartupInfo.TEXT_NAME);
 
         InspectionDBHelper dbHelper = new InspectionDBHelper(this);
         questionList = dbHelper.getAllQuestions();
@@ -114,7 +114,7 @@ public class InspectionActivity extends AppCompatActivity {
             satUnsat = "Unsatisfactory";
         }
         user.setCheck(satUnsat);
-        testRef.child(timeStamp).child(currentQuestion.getQuestion()).setValue(user);
+        testRef.child(currTime).child(currentQuestion.getQuestion()).setValue(user);
         Toast.makeText(InspectionActivity.this, "data inserted successfully", Toast.LENGTH_LONG).show();
     }
 
@@ -145,7 +145,7 @@ public class InspectionActivity extends AppCompatActivity {
     //finishes cycling through questions and advances to comments
     private void advanceToComments() {
         Intent intent = new Intent(InspectionActivity.this, CommentTab.class);
-        intent.putExtra(TEXT_NAME2, timeStamp);
+        intent.putExtra(TEXT_NAME2, currTime);
         startActivity(intent);
     }
 
