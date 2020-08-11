@@ -114,7 +114,7 @@ public class InspectionActivity extends AppCompatActivity {
             satUnsat = "Unsatisfactory";
         }
         user.setCheck(satUnsat);
-        testRef.child(currTime).child(currentQuestion.getQuestion()).setValue(user);
+        testRef.child(currTime).child(satUnsat).child(currentQuestion.getQuestion()).setValue(user);
         Toast.makeText(InspectionActivity.this, "data inserted successfully", Toast.LENGTH_LONG).show();
     }
 
