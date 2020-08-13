@@ -45,7 +45,7 @@ public class userStartupInfo extends AppCompatActivity implements DatePickerDial
     String name, date, truck, dept, currDate, currTime;
     EditText user_name, user_truck, user_dept;
     DatabaseReference testRef;
-    Button addInfo, datePick;
+    Button addInfo, datePick, logOut;
     Users user;
     long maxID;
     private static final String TAG = "userStartupInfo";
@@ -64,6 +64,7 @@ public class userStartupInfo extends AppCompatActivity implements DatePickerDial
         user_truck = (EditText) findViewById(R.id.userTruck);
         user_dept = (EditText) findViewById(R.id.userDept);
         addInfo = (Button) findViewById(R.id.addDataBtn);
+        logOut = (Button) findViewById(R.id.logOutBtn);
 
         datePick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,8 +133,14 @@ public class userStartupInfo extends AppCompatActivity implements DatePickerDial
         datePick.setText(date);
     }
 
+    //Only need to log out after each shift, saves difficulty of logging in each time
     private void finishToHomeScreen() {
-        finish();
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     //transfers user timestamp to next activity for database storage
