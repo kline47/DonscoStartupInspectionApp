@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 /**
  * This is the main login page showed after initial app startup
  * User login info added/stored on Firebase server
@@ -36,6 +38,7 @@ public class LoginPage extends AppCompatActivity {
     private TextView loginText, togglePW;
     private EditText emailTBox, pwTBox;
     private Button loginBtn;
+    ArrayList<Integer> permittedUsers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,4 +135,9 @@ public class LoginPage extends AppCompatActivity {
         Intent intent = new Intent(LoginPage.this, userStartupInfo.class);
         startActivity(intent);
     }
+
+    private void addPermittedUser(ArrayList<Integer> permittedUsers) {
+
+    }
+
 }

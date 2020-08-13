@@ -27,6 +27,7 @@ import org.w3c.dom.Text;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.SimpleTimeZone;
 
@@ -43,13 +44,10 @@ public class userStartupInfo extends AppCompatActivity implements DatePickerDial
 
     String name, date, truck, dept, currDate, currTime;
     EditText user_name, user_truck, user_dept;
-    //TextView nameText, dateText, truckText, deptText;
     DatabaseReference testRef;
     Button addInfo, datePick;
     Users user;
-    long maxID, maxInc;
-    Long timeStampLong;
-    private String timeStamp;
+    long maxID;
     private static final String TAG = "userStartupInfo";
     private TextView user_date;
     private DatePickerDialog.OnDateSetListener uDateSetListener;
@@ -101,7 +99,6 @@ public class userStartupInfo extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View view) {
                 name = user_name.getText().toString();
-                //date = user_date.getText().toString();
                 truck = user_truck.getText().toString();
                 dept = user_dept.getText().toString();
 
